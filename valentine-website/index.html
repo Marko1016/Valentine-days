@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For Alea ❤️</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- PASSWORD SCREEN -->
+    <section id="login">
+      <h1>🔐 Secret Access</h1>
+      <p>Enter our special place:</p>
+      <input
+        type="password"
+        id="passwordInput"
+        placeholder="Hint:photobooth "
+      />
+      <br /><br />
+      <button onclick="checkPassword()">Enter</button>
+    </section>
+
+    <!-- MAIN CONTENT -->
+    <div id="mainContent" class="hidden">
+      <section>
+        <h1>Hi Alea 💕</h1>
+        <h2 id="countdown"></h2>
+      </section>
+
+      <section>
+        <button onclick="openLetter()">💌 Open Letter</button>
+        <div id="letterBox" class="hidden">
+          <p id="typedText"></p>
+        </div>
+      </section>
+
+      <section>
+        <h2>📸 Our Memories</h2>
+        <div class="gallery">
+          <img src="photo 1.jpeg" />
+          <img src="photo 2.jpg" />
+          <img src="photo 3.jpg" />
+        </div>
+      </section>
+
+      <section class="valentine-section">
+        <h2>Will you be my Valentine? 💖</h2>
+        <div class="button-container">
+          <button onclick="yesAnswer()">Yes 💘</button>
+          <button id="noBtn" onmouseover="moveNo()">No 😆</button>
+        </div>
+      </section>
+
+      <audio id="bgMusic" src="music/your-music.mp3" loop></audio>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,110 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(to bottom, #ffd6e8, #ffeef5);
+  text-align: center;
+  color: #d63384;
+  overflow-x: hidden;
+}
+
+section {
+  padding: 60px 20px;
+}
+
+h1,
+h2 {
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 25px;
+  background-color: #ff69b4;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #ff1493;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Floating Hearts */
+.heart {
+  position: fixed;
+  width: 15px;
+  height: 15px;
+  background: pink;
+  transform: rotate(45deg);
+  animation: float 6s linear infinite;
+}
+
+.heart::before,
+.heart::after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: pink;
+  border-radius: 50%;
+}
+
+.heart::before {
+  top: -7px;
+  left: 0;
+}
+.heart::after {
+  left: -7px;
+  top: 0;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(100vh) rotate(45deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-10vh) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+/* Letter Box */
+#letterBox {
+  background: white;
+  border-radius: 15px;
+  padding: 30px;
+  max-width: 500px;
+  margin: 20px auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Gallery */
+.gallery img {
+  width: 200px;
+  margin: 10px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* Valentine Section */
+.valentine-section {
+  position: relative;
+  height: 200px;
+}
+
+.button-container {
+  position: relative;
+  height: 100px;
+}
